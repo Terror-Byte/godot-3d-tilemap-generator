@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=4 uid="uid://bfnkxllel2mgs"]
+
+[ext_resource type="Texture2D" uid="uid://bgkw6bpk10xbx" path="res://Assets/kenney-tower-defence-kit/Textures/colormap.png" id="1_4kiws"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bsfg4"]
+resource_name = "colormap"
+cull_mode = 2
+albedo_texture = ExtResource("1_4kiws")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_winax"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.2, 1),
+"format": 34896613377,
+"index_count": 72,
+"index_data": PackedByteArray("AAABAAIAAQAAAAIAAwABAAAAAgABAAMAAQADAAAAAQACAAMAAgAEAAAABAACAAAAAAAEAAUABQAEAAIABAAAAAUABAAFAAIABgAFAAAABQAGAAAAAAAGAAMABgAAAAMABgADAAUAAwAGAAUABQAHAAMAAwAHAAIABwAFAAMABwADAAIAAgAHAAUABwACAAUA"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAA//8AAP//AAAAAAAA////////AAAAAAAAAAAAAAAA//8AAAAAAAD/////AAD/////AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_pt8do"]
+resource_name = "tile_tile"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.2, 1),
+"attribute_data": PackedByteArray("/5eYuf+XmLn/l5i5/5eYuf+XmLn/l5i5/5eYuf+XmLn/l2WG/5dlhv+XmLn/l5i5/5dlhv+XZYb/l5i5/5eYuf+XZYb/l5i5/5eYuf+XZYb/l5i5/5dlhv+XmLn/l2WG/5eYuf+XmLn/l2WG/5dlhv+XmLn/l5i5/5dlhv+XZYb/l2WG/5eYuf+XmLn/l2WG/5eYuf+XZYb/l5i5/5dlhv+XZYb/l2WG/5dlhv+XZYb/l2WG/5dlhv+XZYb/l2WG"),
+"format": 34896613399,
+"index_count": 72,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABwAGAAUACAAJAAoACgALAAgADAANAA4ADwAOAA0AEAARABIAEgATABAAFAAVABYAFwAWABUAGAAZABoAGgAbABgAHAAdAB4AHwAeAB0AIAAhACIAIgAjACAAJAAlACYAJwAmACUAKAApACoAKgArACgALAAtAC4ALwAuAC0A"),
+"material": SubResource("StandardMaterial3D_bsfg4"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray("AAAAAP///7///wAA////v///AAAAAP+/AAAAAAAA/7///wAA////PwAAAAD///8///8AAAAA/z8AAAAAAAD/P/////////+//////wAA/7///wAAAAD/v///AAD///+//////wAAAAD///////8AAP//AAAAAAAA//8AAP//AAD///////8AgP//AAD//wCAAAAAAP//AIAAAP////8AgP//AAD//wAA////////AAAAAAAA//8AAAAA/////wAAAAAAAP///78AAAAAAAD/vwAA//8AAP+/AAD//////78AAAAAAAAAAAAAAAD//wAAAAD//wAAAAAAAP////8AAAAA//8AAP//AAAAAAAA/////wAAAAD///////8AAP//AAAAAAAAAAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAP//AAD///////8AAP////////////8AAP////////////8AAAAAAAD//wAAAAD///////8AAAAA/////wAAAAD/fwAA/38AAP9/AAD/f////3////9/////f////3//fwAA/38AAP9/AAD/fwAA/z//f/8//3//P/9//z//f/9/////f////3////9///////9/////f////3////9//3////9/////f////3////+//3//v/9//7//f/+//3//f////3////9/////f////3//f/9//3//f/9//3//f/9//7//f/+//3//v/9//7//f/8//3//P/9//z//f/8/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_winax")
+
+[node name="TileGrass" type="Node3D"]
+
+[node name="Model" type="Node3D" parent="."]
+
+[node name="tile" type="MeshInstance3D" parent="Model"]
+mesh = SubResource("ArrayMesh_pt8do")
+skeleton = NodePath("")

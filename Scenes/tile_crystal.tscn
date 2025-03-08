@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1hpeoq4uymy"]
+
+[ext_resource type="PackedScene" uid="uid://b78bk8c6cje3j" path="res://Assets/kenney-tower-defence-kit/tile-crystal.glb" id="1_63b0u"]
+
+[node name="TileCrystal" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_63b0u")]

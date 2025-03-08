@@ -1,0 +1,80 @@
+[gd_scene load_steps=15 format=3 uid="uid://it1ea087jvdk"]
+
+[ext_resource type="Script" uid="uid://wvsu1m4j4wxk" path="res://Scripts/main.gd" id="1_1pu5k"]
+[ext_resource type="PackedScene" uid="uid://sjhy7rwcligs" path="res://Scenes/FlyaroundCamera.tscn" id="2_hjwik"]
+[ext_resource type="Shader" uid="uid://ygowi7s7413h" path="res://Scripts/grid_plane_shader.gdshader" id="3_6bp64"]
+[ext_resource type="PackedScene" uid="uid://2hv876fm57h5" path="res://Scenes/wave_function_collapse_tilemap.tscn" id="4_pubsc"]
+[ext_resource type="Resource" uid="uid://bi1qh7pn4e0pt" path="res://Assets/tile_definition_container.tres" id="9_fewnh"]
+[ext_resource type="PackedScene" uid="uid://cgt6mr8fqy510" path="res://Scenes/hud.tscn" id="10_q0vvd"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_344ge"]
+render_priority = 0
+shader = ExtResource("3_6bp64")
+shader_parameter/gridlineOnEvery = 1.0
+shader_parameter/lineThickness = 0.05
+shader_parameter/originOffset = Vector2(0, 0)
+shader_parameter/color = Color(0, 0.87451, 0, 0.501961)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_21xkr"]
+material = SubResource("ShaderMaterial_344ge")
+size = Vector2(500, 500)
+subdivide_width = 32
+subdivide_depth = 32
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_344ge"]
+albedo_color = Color(0.92549, 0.0823529, 0, 0.501961)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ynf5e"]
+material = SubResource("StandardMaterial3D_344ge")
+size = Vector3(0.05, 4, 0.05)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6bp64"]
+albedo_color = Color(0, 0.87451, 0, 0.501961)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hptm8"]
+material = SubResource("StandardMaterial3D_6bp64")
+size = Vector3(0.05, 4, 0.05)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_21xkr"]
+albedo_color = Color(0.297163, 0.778107, 1, 0.501961)
+
+[sub_resource type="BoxMesh" id="BoxMesh_344ge"]
+material = SubResource("StandardMaterial3D_21xkr")
+size = Vector3(0.05, 4, 0.05)
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_1pu5k")
+
+[node name="FlyaroundCamera" parent="." instance=ExtResource("2_hjwik")]
+transform = Transform3D(-0.589196, 0.646983, -0.484005, 0, 0.599024, 0.800731, 0.80799, 0.471788, -0.352943, 0.025, 10.824, 2.432)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.586118, -0.590087, 0.555215, 1.49012e-08, 0.685259, 0.728299, -0.810226, -0.426869, 0.401643, 8.09431, 11.2075, 5.27237)
+
+[node name="GridPlane" type="MeshInstance3D" parent="."]
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_21xkr")
+
+[node name="AxisLines" type="Node3D" parent="."]
+
+[node name="X-AxisLine" type="MeshInstance3D" parent="AxisLines"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+cast_shadow = 0
+mesh = SubResource("BoxMesh_ynf5e")
+skeleton = NodePath("../Y-AxisLine")
+
+[node name="Y-AxisLine" type="MeshInstance3D" parent="AxisLines"]
+cast_shadow = 0
+mesh = SubResource("BoxMesh_hptm8")
+skeleton = NodePath("../..")
+
+[node name="Z-AxisLine" type="MeshInstance3D" parent="AxisLines"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+cast_shadow = 0
+mesh = SubResource("BoxMesh_344ge")
+skeleton = NodePath("../Y-AxisLine")
+
+[node name="WaveFunctionCollapseTilemap" parent="." instance=ExtResource("4_pubsc")]
+tile_definition_collection = ExtResource("9_fewnh")
+
+[node name="HUD" parent="." instance=ExtResource("10_q0vvd")]

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bansml3dq5yk7"]
+
+[ext_resource type="PackedScene" uid="uid://daaa7lcr33fb4" path="res://Assets/kenney-tower-defence-kit/tile-rock.glb" id="1_gc5tl"]
+
+[node name="TileRock" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_gc5tl")]

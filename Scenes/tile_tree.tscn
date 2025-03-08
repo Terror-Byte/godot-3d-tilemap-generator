@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://yl3paarrw5cm"]
+
+[ext_resource type="PackedScene" uid="uid://bdb3ikaqjci4a" path="res://Assets/kenney-tower-defence-kit/tile-tree.glb" id="1_6glwv"]
+
+[node name="TileTree" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_6glwv")]

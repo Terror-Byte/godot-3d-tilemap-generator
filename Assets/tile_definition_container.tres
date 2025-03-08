@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="TileDefinitionCollection" load_steps=19 format=3 uid="uid://bi1qh7pn4e0pt"]
+
+[ext_resource type="Script" uid="uid://cbwgvuaeilg3p" path="res://Scripts/tile_definition_collection.gd" id="1_hs3a2"]
+[ext_resource type="Resource" uid="uid://dumpbftop350q" path="res://Assets/TileDefinitions/tile_grass_definition.tres" id="2_hh0wc"]
+[ext_resource type="Resource" uid="uid://4kuwrrit47g5" path="res://Assets/TileDefinitions/tile_dirt_definition.tres" id="3_i87xr"]
+[ext_resource type="Resource" uid="uid://cjce1g48jy07a" path="res://Assets/TileDefinitions/tile_straight_horizontal_definition.tres" id="4_swbwa"]
+[ext_resource type="Resource" uid="uid://ds8g4ukyp48m" path="res://Assets/TileDefinitions/tile_straight_vertical_definition.tres" id="5_63k0s"]
+[ext_resource type="Resource" uid="uid://bgsnwp8gsknxn" path="res://Assets/TileDefinitions/tile_crossing_definition.tres" id="6_pcws8"]
+[ext_resource type="Resource" uid="uid://bpj74kvoc3g81" path="res://Assets/TileDefinitions/tile_corner_square_north_east_definition.tres" id="7_g76ry"]
+[ext_resource type="Resource" uid="uid://cwcgeam3d14bd" path="res://Assets/TileDefinitions/tile_corner_square_north_west_definition.tres" id="8_wsas4"]
+[ext_resource type="Resource" uid="uid://saqcft0r3bpu" path="res://Assets/TileDefinitions/tile_corner_square_south_east_definition.tres" id="9_q4if6"]
+[ext_resource type="Resource" uid="uid://pqx40ket0aub" path="res://Assets/TileDefinitions/tile_corner_square_south_west_definition.tres" id="10_rkkpl"]
+[ext_resource type="Resource" uid="uid://w5ixo53sv7ix" path="res://Assets/TileDefinitions/tile_tree_definition.tres" id="11_ur67o"]
+[ext_resource type="Resource" uid="uid://bfw53eyy8jolj" path="res://Assets/TileDefinitions/tile_rock_definition.tres" id="12_p7s1c"]
+[ext_resource type="Resource" uid="uid://bfjxo8nnw8olc" path="res://Assets/TileDefinitions/tile_hill_definition.tres" id="13_ue8q2"]
+[ext_resource type="Resource" uid="uid://b5af6gb8pk1nk" path="res://Assets/TileDefinitions/tile_crystal_definition.tres" id="14_hf4il"]
+[ext_resource type="Resource" uid="uid://cev7obpqcm4p2" path="res://Assets/TileDefinitions/tile_split_north_east_south_definition.tres" id="15_j228d"]
+[ext_resource type="Resource" uid="uid://ctkgqovcph14g" path="res://Assets/TileDefinitions/tile_split_east_south_west_definition.tres" id="16_0n6v1"]
+[ext_resource type="Resource" uid="uid://c7sby1llitu7m" path="res://Assets/TileDefinitions/tile_split_north_west_south_definition.tres" id="17_evvec"]
+[ext_resource type="Resource" uid="uid://cl48w12g6vm5e" path="res://Assets/TileDefinitions/tile_split_west_north_east_definition.tres" id="18_nn7mu"]
+
+[resource]
+script = ExtResource("1_hs3a2")
+tile_definitions = Dictionary[StringName, Resource]({
+&"corner-square-north-east": ExtResource("7_g76ry"),
+&"corner-square-north-west": ExtResource("8_wsas4"),
+&"corner-square-south-east": ExtResource("9_q4if6"),
+&"corner-square-south-west": ExtResource("10_rkkpl"),
+&"crossing": ExtResource("6_pcws8"),
+&"crystal": ExtResource("14_hf4il"),
+&"dirt": ExtResource("3_i87xr"),
+&"grass": ExtResource("2_hh0wc"),
+&"hill": ExtResource("13_ue8q2"),
+&"rock": ExtResource("12_p7s1c"),
+&"split-east-south-west": ExtResource("16_0n6v1"),
+&"split-north-east-south": ExtResource("15_j228d"),
+&"split-north-west-south": ExtResource("17_evvec"),
+&"split-west-north-east": ExtResource("18_nn7mu"),
+&"straight-horizontal": ExtResource("4_swbwa"),
+&"straight-vertical": ExtResource("5_63k0s"),
+&"tree": ExtResource("11_ur67o")
+})

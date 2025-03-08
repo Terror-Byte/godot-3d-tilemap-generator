@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="TileDefinition" load_steps=2 format=3 uid="uid://cl48w12g6vm5e"]
+
+[ext_resource type="Script" uid="uid://cq2q1qyk1smnp" path="res://Scripts/tile_definition.gd" id="1_o300k"]
+
+[resource]
+script = ExtResource("1_o300k")
+tile_asset = "tile-split"
+tile_weight = 0.8
+tile_asset_y_rotation = -270.0
+socket_north = true
+socket_east = true
+socket_south = false
+socket_west = true

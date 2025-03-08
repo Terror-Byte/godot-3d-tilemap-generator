@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="TileDefinition" load_steps=2 format=3 uid="uid://dumpbftop350q"]
+
+[ext_resource type="Script" uid="uid://cq2q1qyk1smnp" path="res://Scripts/tile_definition.gd" id="1_5no8w"]
+
+[resource]
+script = ExtResource("1_5no8w")
+tile_asset = "tile-grass"
+tile_weight = 2.0
+tile_asset_y_rotation = 0.0
+socket_north = false
+socket_east = false
+socket_south = false
+socket_west = false

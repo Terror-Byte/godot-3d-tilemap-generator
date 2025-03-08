@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="TileDefinition" load_steps=2 format=3 uid="uid://b5af6gb8pk1nk"]
+
+[ext_resource type="Script" uid="uid://cq2q1qyk1smnp" path="res://Scripts/tile_definition.gd" id="1_lf2pj"]
+
+[resource]
+script = ExtResource("1_lf2pj")
+tile_asset = "tile-crystal"
+tile_weight = 1.1
+tile_asset_y_rotation = 0.0
+socket_north = false
+socket_east = false
+socket_south = false
+socket_west = false

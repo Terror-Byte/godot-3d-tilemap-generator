@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cucyn5hp65kit"]
+
+[ext_resource type="PackedScene" uid="uid://cg43xatwccg5v" path="res://Assets/kenney-tower-defence-kit/tile-split.glb" id="1_siclv"]
+
+[node name="TileSplit" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_siclv")]

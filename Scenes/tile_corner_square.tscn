@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cs56mx8o42d6"]
+
+[ext_resource type="PackedScene" uid="uid://dwtfr3gymmblc" path="res://Assets/kenney-tower-defence-kit/tile-corner-square.glb" id="1_7dcpb"]
+
+[node name="TileCornerSquare" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_7dcpb")]

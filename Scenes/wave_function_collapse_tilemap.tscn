@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://2hv876fm57h5"]
+
+[ext_resource type="Script" uid="uid://diau6uyciwbfk" path="res://Scripts/wave_function_collapse_tilemap.gd" id="1_ygn2h"]
+
+[node name="WaveFunctionCollapseTilemap" type="Node3D"]
+script = ExtResource("1_ygn2h")

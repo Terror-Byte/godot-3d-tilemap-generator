@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbsckpmb5n25q"]
+
+[ext_resource type="PackedScene" uid="uid://cdphdr2rjjjtt" path="res://Assets/kenney-tower-defence-kit/tile-crossing.glb" id="1_2jyrh"]
+
+[node name="TileCrossing" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_2jyrh")]

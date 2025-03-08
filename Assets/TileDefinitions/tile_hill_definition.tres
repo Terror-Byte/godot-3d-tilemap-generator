@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="TileDefinition" load_steps=2 format=3 uid="uid://bfjxo8nnw8olc"]
+
+[ext_resource type="Script" uid="uid://cq2q1qyk1smnp" path="res://Scripts/tile_definition.gd" id="1_uc12b"]
+
+[resource]
+script = ExtResource("1_uc12b")
+tile_asset = "tile-hill"
+tile_weight = 1.1
+tile_asset_y_rotation = 0.0
+socket_north = false
+socket_east = false
+socket_south = false
+socket_west = false

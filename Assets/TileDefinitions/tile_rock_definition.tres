@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="TileDefinition" load_steps=2 format=3 uid="uid://bfw53eyy8jolj"]
+
+[ext_resource type="Script" uid="uid://cq2q1qyk1smnp" path="res://Scripts/tile_definition.gd" id="1_yo14e"]
+
+[resource]
+script = ExtResource("1_yo14e")
+tile_asset = "tile-rock"
+tile_weight = 1.1
+tile_asset_y_rotation = 0.0
+socket_north = false
+socket_east = false
+socket_south = false
+socket_west = false

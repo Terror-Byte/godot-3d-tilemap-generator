@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://comxq1nxcrffx"]
+
+[ext_resource type="PackedScene" uid="uid://b0tvyxlwdrfv5" path="res://Assets/kenney-tower-defence-kit/tile-hill.glb" id="1_sgim4"]
+
+[node name="TileHill" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_sgim4")]

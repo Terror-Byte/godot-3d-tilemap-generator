@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dup1hqiydrxem"]
+
+[ext_resource type="PackedScene" uid="uid://bmmxi7u3xg87f" path="res://Assets/kenney-tower-defence-kit/tile-straight.glb" id="1_ns0t1"]
+
+[node name="TileStraight" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_ns0t1")]
